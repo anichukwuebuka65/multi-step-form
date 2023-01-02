@@ -36,17 +36,17 @@ function Info({ err, setErr }) {
       </label>
       <input
         {...handleAction("email")}
-        type="e-mail"
+        type="email"
         id="email"
         placeholder="e.g. stephenking@lorem.com"
       />
-      <label htmlFor="phone number">
+      <label htmlFor="phone-number">
         Phone Number {err.numberError ? <span>{err.numberError}</span> : ""}
       </label>
       <input
         {...handleAction("number")}
         type="text"
-        id="phone number"
+        id="phone-number"
         placeholder="e.g. +1 234 567 690"
       />
     </div>
