@@ -37,7 +37,7 @@ function Info({ err, setErr }) {
       <input
         {...handleAction("email")}
         type="e-mail"
-        id="name"
+        id="email"
         placeholder="e.g. stephenking@lorem.com"
       />
       <label htmlFor="phone number">
