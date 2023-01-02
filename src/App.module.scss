@@ -1,0 +1,97 @@
+@import "./scss/mixins";
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--magnolia);
+}
+
+.app {
+  @media (min-width: 700px) {
+    padding: 16px;
+    display: flex;
+    flex-grow: 1;
+    max-width: 940px;
+    background-color: var(--white);
+    border-radius: 10px;
+
+    nav {
+      flex-basis: 272px;
+    }
+  }
+}
+
+.nav_list {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 14px;
+  height: 170px;
+  width: 100vw;
+  padding-top: 2rem;
+  background: url("/images/bg-sidebar-mobile.svg");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 700px) {
+    height: 568px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 40px 32px;
+    background: url("/images/bg-sidebar-desktop.svg");
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 170px);
+  padding: 16px;
+  background-color: var(--magnolia);
+  max-width: 630px;
+
+  @media (min-width: 700px) {
+    flex-grow: 1;
+    height: auto;
+    padding: 48px 92px 0px;
+    background-color: var(--white);
+  }
+
+  .container_body {
+    position: relative;
+    box-shadow: 0px 4px 20px var(--light_blue);
+    padding: 36px 24px 32px;
+    margin-top: -92px;
+    background-color: var(--white);
+    border-radius: 10px;
+
+    @media (min-width: 700px) {
+      box-shadow: none;
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+
+  .btn_wrapper {
+    @include center;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--white);
+
+    @media (min-width: 700px) {
+      padding-left: 0;
+    }
+
+    .previous {
+      color: var(--paste_blue);
+    }
+    .hidePrev {
+      visibility: hidden;
+    }
+  }
+}

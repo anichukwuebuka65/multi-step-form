@@ -1,0 +1,22 @@
+.header {
+  margin-bottom: 14px;
+  color: var(--marine_blue);
+  font-weight: 700;
+  font-size: 24px;
+
+  @media (min-width: 700px) {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+
+.paragraph {
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0px;
+
+  @media (min-width: 700) {
+    margin-bottom: 40px;
+  }
+}

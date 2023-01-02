@@ -1,0 +1,78 @@
+@use "sass:list";
+
+$navValues: (
+  1: (
+    "STEP 1",
+    "YOUR INFO",
+  ),
+  2: (
+    "STEP 2",
+    "SELECT PLANS",
+  ),
+  3: (
+    "STEP 3",
+    "ADD-ONS",
+  ),
+  4: (
+    "STEP 4",
+    "SUMMARY",
+  ),
+);
+
+@mixin before($content) {
+  content: $content;
+  inline-size: max-content;
+  position: absolute;
+  top: 0;
+  left: 43px;
+  font-size: 14px;
+  color: var(--light_gray);
+  opacity: 90%;
+}
+
+@mixin after($content) {
+  content: $content;
+  inline-size: max-content;
+  position: absolute;
+  top: 16px;
+  left: 43px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav_item {
+  position: relative;
+  width: 33px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  text-align: center;
+  list-style-type: none;
+  color: var(--white);
+
+  @media (min-width: 700px) {
+    @each $num, $values in $navValues {
+      &:nth-child(#{$num}) {
+        &::before {
+          @include before(list.nth($values, 1));
+        }
+        &::after {
+          @include after(list.nth($values, 2));
+        }
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+}
+
+.selected {
+  color: var(--marine_blue);
+  background-color: var(--light_blue);
+}

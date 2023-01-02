@@ -1,0 +1,31 @@
+.container {
+  label {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--marine_blue);
+    span {
+      float: right;
+      color: var(--strawberry_red);
+    }
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 18px;
+    border: 1px solid var(--light_gray);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--marine_blue);
+
+    &:focus {
+      outline: none;
+      border-color: var(--purplish_blue);
+    }
+
+    &::placeholder {
+      color: var(--cool_gray);
+    }
+  }
+}

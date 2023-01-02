@@ -1,0 +1,41 @@
+.container {
+  background-color: var(--alabaster);
+  padding: 18px 12px;
+  border-radius: 8px;
+  margin-bottom: 27px;
+
+  @media (min-width: 700px) {
+    padding-inline: 18px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-child {
+      border-bottom: 1px solid var(--light_gray);
+      padding-bottom: 10px;
+    }
+
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .plan {
+      color: var(--marine_blue);
+      font-weight: 700;
+    }
+  }
+}
+
+.margintop {
+  margin-top: 16px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
